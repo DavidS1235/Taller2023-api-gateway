@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: servicio-productos-optica
+          uri: lb://servicio-productos-optica
+          predicates:
+            - Path=/api/productos/**
+          filters:
+            - StripPrefix=2
