@@ -14,3 +14,9 @@ spring:
             - Path=/api/comprobante/**
           filters:
             - StripPrefix=2
+        - id: servicio-clientes-optica
+          uri: lb://servicio-clientes-optica
+          predicates:
+            - Path=/api/clientes/**
+          filters:
+            - StripPrefix=2
