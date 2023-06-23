@@ -8,3 +8,9 @@ spring:
             - Path=/api/productos/**
           filters:
             - StripPrefix=2
+        - id: servicio-comprobante
+          uri: lb://servicio-comprobante
+          predicates:
+            - Path=/api/comprobante/**
+          filters:
+            - StripPrefix=2
